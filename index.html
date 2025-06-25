@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Marques | Portfólio</title>
+</head>
+
+<body>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="./img/FotoPerfil.jpg" alt="Foto de Guilherme" class="foto-perfil">
+            <h1>Guilherme Marques</h1>
+            <p>Desenvolvedor Full Stack</p>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Sou um Desenvolvedor Full Stack com formação em Análise e Desenvolvimento
+                de Sistemas e pós-graduação em Big Data e Analytics.
+                Apaixonado por tecnologia, tenho experiência no desenvolvimento de aplicações web,
+                análise de dados e gestão de projetos, sempre buscando soluções eficientes e inovadoras.
+            </p>
+        </div>
+        <p>
+            <svg height="20" width="20" viewBox="0 0 16 16" fill="#e2e8f0"
+                style="vertical-align: middle; margin-right: 6px;" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.21 2.2.82a7.5 7.5 0 014 0c1.53-1.03 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.001 8.001 0 0016 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+            GitHub:
+            <a class="git" href="https://github.com/guilhermedeoliveiramarques" target="_blank"
+                rel="noopener noreferrer">
+                Guilherme Marques
+            </a>
+        </p>
+
+        <div class="baixar-curriculo">
+            <a href="./documentos/Currículo Guilherme_Marques_2025.pdf" download class="botao-curriculo">
+                Baixar Currículo
+            </a>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="./img/DevBurger.png" alt="DevBurger" class="projetos-imagem">
+                <h3 class="info-projetos">Dev Burger</h3>
+                <p>Aplicação de hamburgueria com envio de pedidos via WhatsApp.</p>
+
+                <div class="botoes-projeto">
+                    <a href="https://guilhermedeoliveiramarques.github.io/DevBurger/" target="_blank"
+                        class="botao-projeto">Abrir</a>
+                </div>
+            </div>
+
+
+            <div class="projetos-card">
+                <img src="./img/Tradutor.png" alt="Tradutor" class="projetos-imagem">
+                <h3 class="info-projetos">Tradutor</h3>
+                <p>
+                    Aplicação simples de tradução de palavras entre idiomas.
+                </p>
+                <div class="botoes-projeto">
+                    <a href="https://guilhermedeoliveiramarques.github.io/TradutorGui/" target="_blank"
+                        class="botao-projeto">Abrir</a>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/Buscador.png" alt="Cep" class="projetos-imagem">
+                <h3 class="info-projetos">Buscador CEP</h3>
+                <p>
+                    Busca e exibe informações detalhadas a partir de um CEP informado.
+                </p>
+                <div class="botoes-projeto">
+                    <a href="https://guilhermedeoliveiramarques.github.io/DevBurger/" target="_blank"
+                        class="botao-projeto">Abrir com git</a>
+                </div>
+            </div>
+            <div class="projetos-card">
+                <img src="./img/Mario.png" alt="Mario" class="projetos-imagem">
+                <h3 class="info-projetos">Game Mario</h3>
+                <p>
+                    Jogo retrô inspirado no Mario, recriado com interações em teclado.
+                </p>
+                <div class="botoes-projeto">
+                    <a href="https://guilhermedeoliveiramarques.github.io/JogoMario/" target="_blank"
+                        class="botao-projeto">Abrir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarParaWhatsApp(event)">
+            <div class="grupo-form">
+                <label for="nome" class="label-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icone" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M5.121 17.804A11.955 11.955 0 0112 15c2.21 0 4.26.623 6.02 1.696M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </label>
+                <input id="nome" name="nome" class="campo-form" placeholder="Nome" required>
+            </div>
+            <div class="grupo-form">
+                <label for="mensagem" class="label-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icone" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 8h10M7 12h4m1 8a9 9 0 110-18 9 9 0 010 18z" />
+                    </svg>
+                </label>
+                <textarea id="mensagem" name="mensagem" class="text-form" placeholder="Digite a sua mensagem"
+                    required></textarea>
+            </div>
+            <button type="submit" class="botao-enviar">Enviar Mensagem via WhatsApp</button>
+        </form>
+    </section>
+</body>
+</html>
+
+<script>
+  function enviarParaWhatsApp(event) {
+    event.preventDefault();
+    
+    const seuNumeroWhatsApp = "5561991710275"; 
+    
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    const texto = `Olá Guilherme, meu nome é ${encodeURIComponent(nome)}. ${encodeURIComponent(mensagem)}`;
+
+    const urlWhatsApp = `https://wa.me/${seuNumeroWhatsApp}?text=${texto}`;
+    
+    window.open(urlWhatsApp, '_blank');
+
+    event.target.reset();
+  }
+</script>
