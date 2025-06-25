@@ -2,6 +2,10 @@
 <html lang="pt-br">
 
 <head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -153,14 +157,17 @@
     const seuNumeroWhatsApp = "5561991710275"; 
     
     const nome = document.getElementById('nome').value;
-    const mensagem = document.getElementById('mensagem').value;
+  const mensagem = document.getElementById('mensagem').value;
+  const texto = `Olá Guilherme, meu nome é ${encodeURIComponent(nome)}. ${encodeURIComponent(mensagem)}`;
+  const urlWhatsApp = `https://wa.me/${seuNumeroWhatsApp}?text=${texto}`;
+  
 
-    const texto = `Olá Guilherme, meu nome é ${encodeURIComponent(nome)}. ${encodeURIComponent(mensagem)}`;
-
-    const urlWhatsApp = `https://wa.me/${seuNumeroWhatsApp}?text=${texto}`;
-    
+  if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    window.location.href = urlWhatsApp;
+  } else {
     window.open(urlWhatsApp, '_blank');
-
-    event.target.reset();
   }
+
+  event.target.reset();
+}
 </script>
